@@ -1,0 +1,21 @@
+packages:
+  "@mui/material": "Premium UI components matching user request"
+  "@mui/icons-material": "Icons for the MUI components"
+  "@emotion/react": "Required for MUI styling"
+  "@emotion/styled": "Required for MUI styling"
+  "recharts": "Stunning data visualization for analytics"
+  "date-fns": "Date formatting and manipulation"
+  "lucide-react": "Additional icons for standard UI elements"
+
+images:
+  - path: "artifacts/finance-app/public/images/auth-bg.png"
+    description: "Abstract 3D fintech data visualization background in dark indigo and emerald green colors, subtle glowing nodes"
+    aspect_ratio: "16:9"
+  - path: "artifacts/finance-app/public/images/empty-state.png"
+    description: "Minimalist dark mode illustration of a flying rocket or upward trending chart, wireframe style"
+    aspect_ratio: "1:1"
+
+notes:
+  - "App uses MUI (Material UI) wrapped in a custom Dark Fintech theme"
+  - "Leveraging `@workspace/api-client-react` for data fetching"
+  - "Using wouter for routing"

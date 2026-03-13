@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-success: hsl(var(--success));
+  --color-danger: hsl(var(--danger));
+  --color-border: hsl(var(--border));
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+  --background: 226 24% 7%;      /* #0f1117 */
+  --foreground: 0 0% 100%;       /* #ffffff */
+  
+  --card: 226 28% 14%;           /* #1a1d2e */
+  --card-foreground: 0 0% 100%;
+  
+  --primary: 239 84% 67%;        /* #6366f1 (Indigo) */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 226 28% 20%;      /* Slightly lighter card */
+  
+  --success: 142 71% 45%;        /* #22c55e (Green) */
+  --danger: 0 84% 60%;           /* #ef4444 (Red) */
+  
+  --border: 226 28% 24%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
+
+/* Recharts Customization */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: hsl(var(--border));
+}
+.recharts-tooltip-cursor {
+  fill: hsl(var(--secondary));
+}
