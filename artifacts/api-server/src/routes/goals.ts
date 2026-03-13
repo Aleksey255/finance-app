@@ -2,7 +2,7 @@ import { Router } from "express";
 import { db } from "@workspace/db";
 import { goalsTable } from "@workspace/db/schema";
 import { eq } from "drizzle-orm";
-import { CreateGoalBody, UpdateGoalBody, ContributeToGoalBody } from "@workspace/api-zod";
+import { CreateGoalBodyFixed as CreateGoalBody, UpdateGoalBodyFixed as UpdateGoalBody, ContributeToGoalBodyFixed as ContributeToGoalBody } from "../lib/schemas";
 
 const router = Router();
 

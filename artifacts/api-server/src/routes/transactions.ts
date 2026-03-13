@@ -2,7 +2,7 @@ import { Router } from "express";
 import { db } from "@workspace/db";
 import { transactionsTable, accountsTable, categoriesTable } from "@workspace/db/schema";
 import { eq, and, gte, lte, sql, desc } from "drizzle-orm";
-import { CreateTransactionBody, UpdateTransactionBody } from "@workspace/api-zod";
+import { CreateTransactionBodyFixed as CreateTransactionBody, UpdateTransactionBodyFixed as UpdateTransactionBody } from "../lib/schemas";
 
 const router = Router();
 
