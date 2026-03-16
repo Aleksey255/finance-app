@@ -5,10 +5,18 @@
   "type": "module",
   "scripts": {
     "hello": "tsx ./src/hello.ts",
+    "migrate-from-mongo": "tsx ./src/migrate-from-mongo.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@workspace/db": "workspace:*",
+    "mongodb": "^6.12.0"
   },
   "devDependencies": {
     "@types/node": "catalog:",
     "tsx": "catalog:"
+  },
+  "dependencies": {
+    "mongodb": "^7.1.0"
   }
 }
